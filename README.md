@@ -11,6 +11,7 @@ This library contains a single function, gorkaplot, which takes six arguments:
 + **xmin_lab**: A character string label for the lower end of the range of the x variable
 + **xmax_lab**: A character string label for the upper end of the range of the x variable
 + **y_var_lab**: A character string label for the y variable
++ **caption**: A text string to use as a caption, including diagram number
 
 These plot settings were built on the following assumptions. Below the primary arrow in the original plot is a text string, ``Terrorism,'' with two arrow segments branching out on either side. Above the primary arrow are two character strings describing the ends of an apparently ordinal scale ranging from ``Peacekeeping'' at the lower end to ``Thermonuclear war'' at the upper end. These choices indicate that ``Terrorism,'' according to the argument being presented visually, causes an observation to move up or down the ``peace-to-war'' scale. That would imply that ``terrorism'' is the independent variable and ``peace-to-war'' is the  dependent variable (``terrorism'' *causes* movement along ``peace-to-war''). Thus, while the blue and red text would intuitively represent two ends of the x-axis, the one typically presented along the horizontal dimension of a two-dimensional figure, this is no ordinary plot style.
 
