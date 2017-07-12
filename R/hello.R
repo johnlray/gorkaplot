@@ -23,7 +23,7 @@ gorka_plot <- function(data, x, y, x_var_lab = "Terrorism?", ymin_lab = "Peaceke
     curve_end = quantile(dat$y_var, .38)
   }
 
-  ggplot(data = dat, aes(x = y_var, y = x_var)) +
+  p <- ggplot(data = dat, aes(x = y_var, y = x_var)) +
     annotate(geom = 'text', x = quantile(dat$x_var, .1), y = 0.1, label = ymin_lab, color = 'blue', fontface = "bold", size = 8, family = "Times") +
     annotate(geom = 'text', x = quantile(dat$x_var, .9), y = 0.1, label = ymax_lab, color = 'red', fontface = "bold", size = 8, family = "Times") +
     annotate(geom = 'text', x  = quantile(dat$y_var, .3), y = -.1, label = x_var_lab, fontface = "italic", color = 'orange', size = 7, family = "Times") +
@@ -48,4 +48,6 @@ gorka_plot <- function(data, x, y, x_var_lab = "Terrorism?", ymin_lab = "Peaceke
           panel.grid.major=element_blank(),
           panel.grid.minor=element_blank(),
           plot.background=element_blank())
+
+  return(p)
 }
